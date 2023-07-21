@@ -75,11 +75,16 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     const sortedNames = people.sort((a,b) => a[0] - b[0])
-    console.log(sortedNames);
+    //console.log(sortedNames);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const summed = data.reduce((accum,curr) => {
+      accum[curr] = (accum[curr] || 0)+1;
+      return accum;
+    },{});
+    console.log(summed);
 
   </script>
 </body>
